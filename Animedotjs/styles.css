@@ -1,0 +1,15 @@
+body {
+    background-color: #233242;
+}
+
+.text {
+    color: aliceblue;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: xx-large;
+}
+
+.square {
+    height: 50px;
+    width: 50px;
+    background-color: dodgerblue;
+}
