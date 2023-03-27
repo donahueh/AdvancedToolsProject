@@ -1,13 +1,25 @@
-let squareclick = anime({
-    targets: '.square',
-    translateX: 250,
-    backgroundColor: '#FFF',
-    borderRadius: ['0%', '50%'],
-    easing: 'easeInOutQuad',
-    autoplay: false,
-    loop: true
+let t1 = anime.timeline({
+  easing: 'easeOutExpo',
+  autoplay: false
+});
+
+t1
+  .add({
+    targets: '.text',
+    opacity: "0",
+    duration: 5
+  })
+  .add({
+    targets: '.button',
+    width: "0",
+    duration: 750
+  })
+  .add({
+    targets: '.opener',
+    translateY: -1000,
+    duration: 1000
   });
 
-  document.querySelector(".square").addEventListener("mouseup",function(){
-    squareclick.play();
+  document.querySelector(".button").addEventListener("mouseup",function(){
+    t1.play();
   })  
